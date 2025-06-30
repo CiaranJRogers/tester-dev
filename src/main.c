@@ -20,20 +20,14 @@ stdio_init_all();
 
     log_open();
     LOG_INFO(
-        "Trying to get the fucking LED to blink for fucks sake please \n"
+        "Blinking an LED\n"
             );
 
     
 
 
     while (1) {
-        /* uint16_t raw = adc_read(); 
-        LOG_INFO("Fader ADC value: %u\n", raw);
-        sleep_ms(100); // Read every 100ms
-
-        sleep_ms(100);
-    
-        sleep_ms(100); */
+       
         gpio_put(LED_PIN, 1); // LED on
         sleep_ms(250);
         gpio_put(LED_PIN, 0); // LED off

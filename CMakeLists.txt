@@ -8,7 +8,9 @@ set(CMAKE_CXX_STANDARD 17)
 # Initialise pico_sdk from installed location
 # (note this can come from environment, CMake cache etc)
 
-set(PICO_BOARD pico CACHE STRING "Board type")
+set(PICO_BOARD pico2 CACHE STRING "Board type")
+
+set(PICO_PLATFORM rp2350)
 
 set(PROJECT_NAME pico-template-project)
 
