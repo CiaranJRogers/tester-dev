@@ -1,0 +1,89 @@
+/*{
+  "cmake.configureOnOpen": false,
+  "cmake.statusbar.advanced": {
+    "debug" : {
+      "visibility": "hidden"
+              },    "launch" : {
+      "visibility": "hidden"
+               },
+    "build" : {
+      "visibility": "hidden"
+               },
+    "buildTarget" : {
+      "visibility": "hidden"
+               },
+    },
+    "cortex-debug.variableUseNaturalFormat": true,
+}*/
+
+/*{
+    "files.associations": {
+        "i2c.h": "c",
+        "compare": "c",
+        "cstdint": "c"
+    }
+}*/
+
+
+{
+    "cmake.configureOnOpen": false,
+    "cmake.statusbar.advanced": {
+      "debug" : {
+        "visibility": "hidden"
+                },    "launch" : {
+        "visibility": "hidden"
+                 },
+      "build" : {
+        "visibility": "hidden"
+                 },
+      "buildTarget" : {
+        "visibility": "hidden"
+                 },
+      },
+      "files.associations": {
+        "segger_rtt.h": "c",
+        "log.h": "c",
+        "watchdog.h": "c",
+        "main.h": "c",
+        "*.inc": "c",
+        "i2c.h": "c",
+        "compare": "c",
+        "cstdint": "c",
+        "algorithm": "c",
+        "random": "c",
+        "*.tpp": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "rope": "cpp",
+        "dynamic_bitset": "cpp",
+        "array": "cpp",
+        "bit": "cpp",
+        "*.tcc": "cpp",
+        "cmath": "cpp",
+        "concepts": "cpp",
+        "cstdarg": "cpp",
+        "cstdlib": "cpp",
+        "ctime": "cpp",
+        "exception": "cpp",
+        "numeric": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp",
+        "initializer_list": "cpp",
+        "iostream": "cpp",
+        "istream": "cpp",
+        "limits": "cpp",
+        "ostream": "cpp",
+        "sstream": "cpp",
+        "stdexcept": "cpp",
+        "typeinfo": "cpp",
+        "ranges": "cpp",
+        "clocale": "cpp",
+        "cstddef": "cpp",
+        "cstdio": "cpp",
+        "cstring": "cpp",
+        "cwchar": "cpp"
+      },
+      "cortex-debug.variableUseNaturalFormat": true,
+      "stm32-for-vscode.openOCDPath": false,
+  }
