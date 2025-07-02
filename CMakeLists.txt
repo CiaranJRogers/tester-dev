@@ -8,11 +8,11 @@ set(CMAKE_CXX_STANDARD 17)
 # Initialise pico_sdk from installed location
 # (note this can come from environment, CMake cache etc)
 
-set(PICO_BOARD pico2 CACHE STRING "Board type")
+set(PICO_BOARD solderparty_rp2350_stamp_xl CACHE STRING "Board type")
 
 set(PICO_PLATFORM rp2350)
 
-set(PROJECT_NAME pico-template-project)
+set(PROJECT_NAME tester_dev)
 
 set(NOT{PICO_SDK_PATH})
 
@@ -21,7 +21,7 @@ set(ENV{PICO_SDK_FETCH_FROM_GIT} 1)
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-if (PICO_SDK_VERSION_STRING VERSION_LESS "1.4.0")
+if (PICO_SDK_VERSION_STRING VERSION_LESS "2.0.0")
   message(FATAL_ERROR "Raspberry Pi Pico SDK version 1.4.0 (or later) required. Your version is ${PICO_SDK_VERSION_STRING}")
 endif()
 
