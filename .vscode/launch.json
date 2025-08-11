@@ -74,16 +74,12 @@
       "request": "launch",
       "type": "cortex-debug",
       "interface": "swd",
-      // "serialNumber": "261006269",
-      // "serialNumber": "261005695",
+    
       "device": "RP2350_M33_0",
       "svdFile": "${env:PICO_SDK_PATH}/src/rp2350/hardware_regs/RP2350.svd",
       "runToEntryPoint": "main",
-      // "postRestartCommands": [
-      //   "break main",
-      //   "continue"
-      // ],
-      "rttConfig": {
+      
+       "rttConfig": {
           "enabled": true,
           "address": "auto",
           "decoders": [
