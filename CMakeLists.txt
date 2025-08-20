@@ -22,11 +22,17 @@ project(${PROJECT_NAME} C CXX ASM)
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
-set(INCLUDE_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/inc)
+set(INCLUDE_DIRECTORIES
+        ${CMAKE_CURRENT_SOURCE_DIR}/system
+        ${CMAKE_CURRENT_SOURCE_DIR}/instrument
+        ${CMAKE_CURRENT_SOURCE_DIR}/interface
+        ${CMAKE_CURRENT_SOURCE_DIR}/hardware)
 
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/*.c)
-
+    ${CMAKE_CURRENT_SOURCE_DIR}/system/*.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/instrument/*.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/interface/*.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/hardware/*.cpp)
 
 add_executable(${PROJECT_NAME}  
     ${SOURCES}
@@ -41,6 +47,7 @@ pico_enable_stdio_usb(${PROJECT_NAME}  1)
 # Add the standard library to the build
 target_link_libraries(${PROJECT_NAME} 
         pico_stdlib
+        
         )
 
 # Add the standard include files to the build
