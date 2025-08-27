@@ -5,6 +5,8 @@
 
 class ParameterInterface
 {
+
+
 	public:
 		ParameterInterface() = default;
 		~ParameterInterface() = default;

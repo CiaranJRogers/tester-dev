@@ -14,8 +14,8 @@ class Hardware
 		
 	
 	private:
-		int buttonPin = 22;
-		int ledPin = 21;
+		int buttonPin = 17;
+		int ledPin = 16;
 };
 
 #endif // HARDWARE_H

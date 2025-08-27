@@ -10,7 +10,11 @@ set(PICO_PLATFORM rp2350)
 set(PROJECT_NAME tester_dev)
 set(NOT{PICO_SDK_PATH})
 set(ENV{PICO_SDK_FETCH_FROM_GIT} 1)
+#set(ENV{PICO_EXTRAS_FETCH_FROM_GIT} 1)
+
 include(pico_sdk_import.cmake)
+#include(pico_extras_import.cmake)
+
 
 if (PICO_SDK_VERSION_STRING VERSION_LESS "2.0.0")
   message(FATAL_ERROR "Raspberry Pi Pico SDK version 1.4.0 (or later) required. Your version is ${PICO_SDK_VERSION_STRING}")
@@ -32,7 +36,9 @@ file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS
     ${CMAKE_CURRENT_SOURCE_DIR}/system/*.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/instrument/*.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/interface/*.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/hardware/*.cpp)
+    ${CMAKE_CURRENT_SOURCE_DIR}/hardware/*.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/hardware/*.c
+    )
 
 add_executable(${PROJECT_NAME}  
     ${SOURCES}
@@ -47,7 +53,8 @@ pico_enable_stdio_usb(${PROJECT_NAME}  1)
 # Add the standard library to the build
 target_link_libraries(${PROJECT_NAME} 
         pico_stdlib
-        
+        tinyusb_device
+
         )
 
 # Add the standard include files to the build

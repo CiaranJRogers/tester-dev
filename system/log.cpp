@@ -16,7 +16,7 @@
 
 void log_open()
 {
-    stdio_usb_init();
+    //stdio_usb_init();
 
     sleep_ms(2000);
 

@@ -6,10 +6,9 @@ void Instrument::process(const InstrumentInputData& data, InstrumentOutputData& 
 {
     if (data.parameter.stateFlip)
     {
-        // Reset the state flip after processing
+        // Flip the state
         state = !state;
+        
     }
-    output.state.state = state;
-
-
+    output.state.state = state ;
 }

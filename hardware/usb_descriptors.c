@@ -118,7 +118,7 @@ char const* string_desc_arr [] =
 {
   (const char[]) { 0x09, 0x04 }, // 0: is supported language is English (0x0409)
   "Instruo",                     // 1: Manufacturer
-  "Instruo Scion",              // 2: Product
+  "Instruo Tester",              // 2: Product
   "172839",                      // 3: Serials, should use chip ID
   "Midi Interface",             // 4: Midi Interface
   "CDC Interface"               // 5: CDC INterface

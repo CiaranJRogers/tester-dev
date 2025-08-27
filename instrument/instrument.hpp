@@ -9,6 +9,7 @@ You’ll fill in the process function with the behavior you want your instrument
 
 class Instrument
 {
+
 	public:
 		Instrument() = default;		// default constructor
 		~Instrument() = default;	// default destructor
@@ -16,7 +17,7 @@ class Instrument
 		void process(const InstrumentInputData& data, InstrumentOutputData& output);
 
 	private:
-		bool state = false;
+		bool state = false; 
 };
 
 #endif // INSTRUMENT_H

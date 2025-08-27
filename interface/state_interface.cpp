@@ -4,7 +4,6 @@
 
 void StateInterface::process(const StateInputData& input, StateOutputData& output)  
 {
-    // Update the hardware output data based on the current state
-    output.hardware.ledState = input.state.state; // Set LED state to the current state
+    output.hardware.ledState = input.state.state;
 }
 
