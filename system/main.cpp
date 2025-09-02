@@ -18,7 +18,6 @@ int main()
     .role = TUSB_ROLE_DEVICE,
     .speed = TUSB_SPEED_AUTO
   };
-
   tusb_init(BOARD_TUD_RHPORT, &dev_init);
 
  

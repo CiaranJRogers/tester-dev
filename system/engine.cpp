@@ -44,7 +44,17 @@ void Engine::run()
 				run_engine = false;
 			}
 		}
+			// if (tud_cdc_available()) 
+			// {
+      		// 	uint8_t buf[64];
+      		// 	uint32_t n = tud_cdc_read(buf, sizeof(buf));
+      		// 	tud_cdc_write(buf, n);
+      		// 	tud_cdc_write_flush();
+			// }
+				
 	}
+
+
 }
 
 void Engine::process()
