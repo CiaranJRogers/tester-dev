@@ -9,6 +9,11 @@
 #include "state_data.hpp"
 #include "hardware.hpp"
 #include "hardware_data.hpp"
+#include "tusb.h"
+
+
+void cdc_task(void);
+
 
 class Engine
 {
@@ -29,6 +34,7 @@ class Engine
 		StateInterface state_interface;
 		Hardware hardware;
 };
+
 
 
 #endif // SYSTEM_ENGINE_HPP

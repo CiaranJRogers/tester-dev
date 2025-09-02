@@ -4,67 +4,43 @@
 #include "log.hpp"
 #include "engine.hpp"
 #include "tusb.h"
+#include "tusb_config.h"
 
-// static Engine engine;
 
-void cdc_task(void);
+static Engine engine;
+
 
 int main()
 {
+  
+  // init device stack on configured roothub port
+  tusb_rhport_init_t dev_init = {
+    .role = TUSB_ROLE_DEVICE,
+    .speed = TUSB_SPEED_AUTO
+  };
 
-    // log_open();
+  tusb_init(BOARD_TUD_RHPORT, &dev_init);
 
-    // LOG_INFO("Hello world\n");
-
-
-    //engine.run();
  
-
-while (1)
-{
-    cdc_task(); 
-};
-
-
-    return 0;
-}
-
-void cdc_task(void) {
-  // connected() check for DTR bit
-  // Most but not all terminal client set this when making connection
-  // if ( tud_cdc_connected() )
+  
+  while(1)
   {
-    // connected and there are data available
-    if (tud_cdc_available()) {
-      // read data
-      char buf[64];
-      uint32_t count = tud_cdc_read(buf, sizeof(buf));
-      (void) count;
 
-      // Echo back
-      // Note: Skip echo by commenting out write() and write_flush()
-      // for throughput test e.g
-      //    $ dd if=/dev/zero of=/dev/ttyACM0 count=10000
-      tud_cdc_write(buf, count);
-      tud_cdc_write_flush();
-    }
+   //tud_task();
+  //cdc_task();
+
+    engine.run();       // will block and run the engine loop
   }
+
+  return 0;
+
+
+
 }
 
-// Invoked when cdc when line state changed e.g connected/disconnected
-void tud_cdc_line_state_cb(uint8_t itf, bool dtr, bool rts) {
-  (void) itf;
-  (void) rts;
 
-  // TODO set some indicator
-  if (dtr) {
-    // Terminal connected
-  } else {
-    // Terminal disconnected
-  }
-}
 
-// Invoked when CDC interface received data from host
-void tud_cdc_rx_cb(uint8_t itf) {
-  (void) itf;
-}
+
+
+
+

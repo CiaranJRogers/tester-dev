@@ -15,6 +15,7 @@ class Instrument
 		~Instrument() = default;	// default destructor
 
 		void process(const InstrumentInputData& data, InstrumentOutputData& output);
+	
 
 	private:
 		bool state = false; 
