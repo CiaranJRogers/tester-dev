@@ -35,6 +35,31 @@ void Engine::run()
 	{
 		tud_task();
       	cdc_task();
+
+		// if (tud_cdc_available()) {
+        //     char buf[64];
+        //     uint32_t count = tud_cdc_read(buf, sizeof(buf));
+        //     for (uint32_t i = 0; i < count; i++) {
+        //         char c = buf[i];
+        //         switch (c) {
+        //             case '1':
+        //                 hardware_input_data.command = SerialCommand::LED_ON;
+        //                 break;
+        //             case '0':
+        //                 hardware_input_data.command = SerialCommand::LED_OFF;
+        //                 break;
+        //             case 'b':
+        //                 hardware_input_data.command = SerialCommand::LED_BLINK;
+        //                 break;
+        //             default:
+        //                 hardware_input_data.command = SerialCommand::NONE;
+        //                 break;
+        //         }
+        //         hardware.process_input(hardware_input_data);
+        //     }
+        // }
+
+	
 		if (run_engine)
 		{
 			this->process();
@@ -44,13 +69,7 @@ void Engine::run()
 				run_engine = false;
 			}
 		}
-			// if (tud_cdc_available()) 
-			// {
-      		// 	uint8_t buf[64];
-      		// 	uint32_t n = tud_cdc_read(buf, sizeof(buf));
-      		// 	tud_cdc_write(buf, n);
-      		// 	tud_cdc_write_flush();
-			// }
+		
 				
 	}
 

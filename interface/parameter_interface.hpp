@@ -15,6 +15,9 @@ class ParameterInterface
 
 	private:
 		bool lastButtonState = false;
+    
+    
 };
+
 
 #endif // PARAMETER_INTERFACE_H

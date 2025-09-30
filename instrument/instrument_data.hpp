@@ -9,6 +9,8 @@
 struct InstrumentInputData
 {
 	const ParameterData& parameter;
+	
+
 };
 
 struct InstrumentOutputData

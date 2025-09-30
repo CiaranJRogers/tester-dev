@@ -4,6 +4,6 @@
 
 void StateInterface::process(const StateInputData& input, StateOutputData& output)  
 {
-    output.hardware.ledState = input.state.state;
+   output.hardware.ledState = input.state.state;
 }
 

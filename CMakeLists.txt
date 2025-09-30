@@ -6,7 +6,7 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 
 set(PICO_BOARD solderparty_rp2350_stamp_xl CACHE STRING "Board type")
-set(PICO_PLATFORM rp2350)
+# set(PICO_PLATFORM rp2350)
 set(PROJECT_NAME tester_dev)
 set(NOT{PICO_SDK_PATH})
 set(ENV{PICO_SDK_FETCH_FROM_GIT} 1)
@@ -68,6 +68,7 @@ target_include_directories(${PROJECT_NAME}  PRIVATE
 # Add any user requested libraries
 target_link_libraries(${PROJECT_NAME}
         hardware_adc
+        hardware_timer
         )
 
 target_compile_definitions(${PROJECT_NAME} PUBLIC

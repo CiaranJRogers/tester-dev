@@ -1,7 +1,6 @@
 
 
 #include "pico/stdlib.h"
-#include "log.hpp"
 #include "engine.hpp"
 #include "tusb.h"
 #include "tusb_config.h"
@@ -14,7 +13,7 @@ int main()
 {
   
   // init device stack on configured roothub port
-  tusb_rhport_init_t dev_init = {
+   tusb_rhport_init_t dev_init = {
     .role = TUSB_ROLE_DEVICE,
     .speed = TUSB_SPEED_AUTO
   };
@@ -24,11 +23,8 @@ int main()
   
   while(1)
   {
-
-   //tud_task();
-  //cdc_task();
-
-    engine.run();       // will block and run the engine loop
+    engine.run();
+    
   }
 
   return 0;

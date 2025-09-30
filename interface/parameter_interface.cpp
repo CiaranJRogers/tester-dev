@@ -17,3 +17,20 @@ void ParameterInterface::process(const ParameterInputData& input, ParameterOutpu
     // Store the last button state
     lastButtonState = input.hardware.buttonPress;
 }
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
